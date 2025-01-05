@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://c3ujyaj4p0tb8"]
+
+[ext_resource type="Script" path="res://Scenes/EnemyType.gd" id="1_qmx16"]
+[ext_resource type="Script" path="res://Scenes/PickupResource.gd" id="1_wxwtc"]
+[ext_resource type="Resource" uid="uid://n124tqxy1n41" path="res://Resources/Pickups/Blue Gem.tres" id="2_1p0vj"]
+[ext_resource type="Texture2D" uid="uid://dojnlx04sk6d7" path="res://Assets/Assets Tutor/Enemies/2 v1.png" id="2_ghmvq"]
+
+[resource]
+script = ExtResource("1_qmx16")
+title = "Cube"
+texure = ExtResource("2_ghmvq")
+health = 3.0
+damage = 3.0
+drops = Array[ExtResource("1_wxwtc")]([ExtResource("2_1p0vj")])

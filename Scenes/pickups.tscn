@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dti21wxxk112s"]
+
+[ext_resource type="Script" path="res://Scenes/pickups.gd" id="1_bra0g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cpijx"]
+
+[node name="Pickups" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_bra0g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cpijx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

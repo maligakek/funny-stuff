@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://n124tqxy1n41"]
+
+[ext_resource type="Texture2D" uid="uid://mvgn5uk52afy" path="res://Assets/MineAssets/XP_gems/Sprite-Experience_Gem-export.png" id="1_ls448"]
+[ext_resource type="Script" path="res://Scenes/Gem.gd" id="2_ptgq5"]
+
+[resource]
+script = ExtResource("2_ptgq5")
+XP = 10.0
+title = "Blue Gem"
+icon = ExtResource("1_ls448")
+description = "Gains Experience Points."

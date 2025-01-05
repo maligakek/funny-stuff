@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://bf1hxhxvv3sta"]
+
+[ext_resource type="Script" path="res://Scenes/PickupResource.gd" id="1_dhuy1"]
+[ext_resource type="Script" path="res://Scenes/EnemyType.gd" id="1_xn4hl"]
+[ext_resource type="Resource" uid="uid://douhr20yesfjr" path="res://Resources/Pickups/Green Gem.tres" id="2_8ekou"]
+[ext_resource type="Texture2D" uid="uid://df6x5niigluta" path="res://Assets/Assets Tutor/Enemies/5 v1.png" id="2_vl8o4"]
+
+[resource]
+script = ExtResource("1_xn4hl")
+title = "EyeGhost"
+texure = ExtResource("2_vl8o4")
+health = 5.0
+damage = 7.0
+drops = Array[ExtResource("1_dhuy1")]([ExtResource("2_8ekou")])
