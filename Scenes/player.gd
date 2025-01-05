@@ -17,7 +17,7 @@ var recovery : float = 0
 
 var armor : float = 0
 
-var might : float = 1
+var might : float = 1.5
 
 var area : float = 0
 
