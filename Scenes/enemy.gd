@@ -26,6 +26,7 @@ var elite : bool = false:
 			health = health * 10
 			speed = speed * 1.5
 
+
 var type : Enemy:
 	set(value):
 		type = value

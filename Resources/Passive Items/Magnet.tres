@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://dsoiyj1lc7wkl"]
+
+[ext_resource type="Script" path="res://Scenes/PassiveItem.gd" id="1_rln6u"]
+[ext_resource type="Texture2D" uid="uid://c3po0siec4t5v" path="res://Assets/VampireAssets/Sprite-Attractorb.png" id="2_s6vxh"]
+[ext_resource type="Script" path="res://Scenes/Stats.gd" id="3_rsffj"]
+
+[sub_resource type="Resource" id="Resource_gobpq"]
+script = ExtResource("3_rsffj")
+description = "+15 Magnet Range "
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 15.0
+revival = 0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_psr82"]
+script = ExtResource("3_rsffj")
+description = "+20 Magnet Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 20.0
+revival = 0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_r0s3p"]
+script = ExtResource("3_rsffj")
+description = "+ 25 Magnet Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 25.0
+revival = 0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_rln6u")
+upgrades = Array[ExtResource("3_rsffj")]([SubResource("Resource_gobpq"), SubResource("Resource_psr82"), SubResource("Resource_r0s3p")])
+title = "Magnet"
+texture = ExtResource("2_s6vxh")
