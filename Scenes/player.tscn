@@ -111,12 +111,14 @@ texture_progress = ExtResource("6_3w10q")
 [node name="Level" type="Label" parent="Sprite2D/UI/XP"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 128.0
-offset_top = 16.0
-offset_right = 168.0
-offset_bottom = 39.0
+offset_left = 131.0
+offset_top = 10.0
+offset_right = 185.0
+offset_bottom = 36.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_nokbl")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 32
 text = "Lvl 1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -183,6 +185,6 @@ shape = SubResource("CircleShape2D_yljup")
 [connection signal="body_entered" from="SelfDamage" to="." method="_on_self_damage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Dash_time" to="." method="_on_dash_time_timeout"]
-[connection signal="timeout" from="Dash_again_time" to="." method="_on_dash_again_time_timeout"]
 [connection signal="timeout" from="Dash_again_time" to="." method="_on_dash_time_timeout"]
+[connection signal="timeout" from="Dash_again_time" to="." method="_on_dash_again_time_timeout"]
 [connection signal="area_entered" from="Magnet" to="." method="_on_magnet_area_entered"]

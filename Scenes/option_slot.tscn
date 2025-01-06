@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bs6mpwg8y0xjp"]
+[gd_scene load_steps=5 format=3 uid="uid://bs6mpwg8y0xjp"]
 
 [ext_resource type="Texture2D" uid="uid://cqonh58vp0tvi" path="res://Assets/VampireAssets/magic_wand.png" id="1_a6gv3"]
 [ext_resource type="Script" path="res://Scenes/option_slot.gd" id="2_g5kvy"]
 [ext_resource type="Texture2D" uid="uid://cmv5jxnoq2g7j" path="res://Assets/MineAssets/UI/UI_1.png" id="2_r4g4g"]
+[ext_resource type="FontFile" uid="uid://dnjbhc4e0qia2" path="res://Fonts/EXEPixelPerfect.ttf" id="3_2c4js"]
 
 [node name="OptionSlot" type="TextureButton"]
 custom_minimum_size = Vector2(315, 40)
@@ -16,23 +17,27 @@ script = ExtResource("2_g5kvy")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 8.0
-offset_right = 88.0
-offset_bottom = 31.0
+offset_left = 46.0
+offset_top = 4.0
+offset_right = 86.0
+offset_bottom = 30.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2c4js")
+theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Description" type="Label" parent="."]
 layout_mode = 0
-offset_left = 108.0
-offset_top = 7.0
-offset_right = 265.0
+offset_left = 129.0
+offset_top = 4.0
+offset_right = 289.0
 offset_bottom = 30.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2c4js")
+theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
 vertical_alignment = 1
 
