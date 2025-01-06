@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3po0siec4t5v"
-path="res://.godot/imported/Sprite-Attractorb.png-36eba1bd1d85e17c319ef18da0f15557.ctex"
+uid="uid://bh7vffhrcml50"
+path="res://.godot/imported/Sprite-Spinach.png-ffc3427ec305d846492e9338a235b393.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/VampireAssets/Sprite-Attractorb.png"
-dest_files=["res://.godot/imported/Sprite-Attractorb.png-36eba1bd1d85e17c319ef18da0f15557.ctex"]
+source_file="res://Assets/VampireAssets/Passives/Sprite-Spinach.png"
+dest_files=["res://.godot/imported/Sprite-Spinach.png-ffc3427ec305d846492e9338a235b393.ctex"]
 
 [params]
 

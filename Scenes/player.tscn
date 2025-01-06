@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d0khn30b8bndi"]
+[gd_scene load_steps=20 format=3 uid="uid://d0khn30b8bndi"]
 
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_6gcqw"]
 [ext_resource type="Texture2D" uid="uid://mvgn5uk52afy" path="res://Assets/MineAssets/XP_gems/Sprite-Experience_Gem-export.png" id="2_k78y3"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://kjidboofxkw5" path="res://Assets/MineAssets/XP_bar/UnderXP.png" id="4_q1ory"]
 [ext_resource type="Texture2D" uid="uid://cmqf6p66uwx6s" path="res://Assets/MineAssets/XP_bar/XPbar.png" id="5_nijg6"]
 [ext_resource type="Texture2D" uid="uid://cel3pdcknxx5x" path="res://Assets/MineAssets/XP_bar/OverXP.png" id="6_3w10q"]
+[ext_resource type="PackedScene" uid="uid://cutkub3c4c2ef" path="res://Scenes/passive_slot.tscn" id="7_0utof"]
 [ext_resource type="FontFile" uid="uid://dnjbhc4e0qia2" path="res://Fonts/EXEPixelPerfect.ttf" id="7_nokbl"]
+[ext_resource type="Resource" uid="uid://dsoiyj1lc7wkl" path="res://Resources/Passive Items/Magnet.tres" id="8_60ppg"]
 [ext_resource type="Script" path="res://Scenes/options.gd" id="8_io7uf"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_solwm"]
@@ -92,12 +94,27 @@ offset_bottom = 57.0
 
 [node name="Slot" parent="Sprite2D/UI/Weapons" instance=ExtResource("2_wponj")]
 layout_mode = 2
-weapon = ExtResource("3_pdwyg")
+item = ExtResource("3_pdwyg")
 
 [node name="Slot2" parent="Sprite2D/UI/Weapons" instance=ExtResource("2_wponj")]
 layout_mode = 2
 
 [node name="Slot3" parent="Sprite2D/UI/Weapons" instance=ExtResource("2_wponj")]
+layout_mode = 2
+
+[node name="PassiveItems" type="HBoxContainer" parent="Sprite2D/UI"]
+offset_top = 60.0
+offset_right = 128.0
+offset_bottom = 100.0
+
+[node name="PassiveSlot" parent="Sprite2D/UI/PassiveItems" instance=ExtResource("7_0utof")]
+layout_mode = 2
+item = ExtResource("8_60ppg")
+
+[node name="PassiveSlot2" parent="Sprite2D/UI/PassiveItems" instance=ExtResource("7_0utof")]
+layout_mode = 2
+
+[node name="PassiveSlot3" parent="Sprite2D/UI/PassiveItems" instance=ExtResource("7_0utof")]
 layout_mode = 2
 
 [node name="XP" type="TextureProgressBar" parent="Sprite2D/UI"]
@@ -123,7 +140,7 @@ text = "Lvl 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Options" type="VBoxContainer" parent="Sprite2D/UI" node_paths=PackedStringArray("weapons", "particles", "panel")]
+[node name="Options" type="VBoxContainer" parent="Sprite2D/UI" node_paths=PackedStringArray("weapons", "passive_items", "particles", "panel")]
 unique_name_in_owner = true
 process_mode = 3
 visible = false
@@ -140,6 +157,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_io7uf")
 weapons = NodePath("../Weapons")
+passive_items = NodePath("../PassiveItems")
 particles = NodePath("../Particle")
 panel = NodePath("../Panel")
 

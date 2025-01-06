@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://dsoiyj1lc7wkl"]
 
 [ext_resource type="Script" path="res://Scenes/PassiveItem.gd" id="1_rln6u"]
-[ext_resource type="Texture2D" uid="uid://c3po0siec4t5v" path="res://Assets/VampireAssets/Sprite-Attractorb.png" id="2_s6vxh"]
+[ext_resource type="Texture2D" uid="uid://c3po0siec4t5v" path="res://Assets/VampireAssets/Passives/Sprite-Attractorb.png" id="2_s6vxh"]
 [ext_resource type="Script" path="res://Scenes/Stats.gd" id="3_rsffj"]
 
 [sub_resource type="Resource" id="Resource_gobpq"]

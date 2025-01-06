@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://dhubun8fk44q0"]
+
+[ext_resource type="Script" path="res://Scenes/PassiveItem.gd" id="1_216rq"]
+[ext_resource type="Texture2D" uid="uid://ri7ghw3aktnr" path="res://Assets/VampireAssets/Passives/Sprite-Candelabrador.png" id="2_85haf"]
+[ext_resource type="Script" path="res://Scenes/Stats.gd" id="3_jtl4s"]
+
+[sub_resource type="Resource" id="Resource_5m0ng"]
+script = ExtResource("3_jtl4s")
+description = "+25 Attack Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 25.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_jvuip"]
+script = ExtResource("3_jtl4s")
+description = "+30 Attack Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 30.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_cady8"]
+script = ExtResource("3_jtl4s")
+description = "+35 Attack Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 35.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_216rq")
+upgrades = Array[ExtResource("3_jtl4s")]([SubResource("Resource_5m0ng"), SubResource("Resource_jvuip"), SubResource("Resource_cady8")])
+title = "Area"
+texture = ExtResource("2_85haf")

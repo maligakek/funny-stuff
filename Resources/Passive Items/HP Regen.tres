@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://n5jb5qtolcq5"]
+
+[ext_resource type="Script" path="res://Scenes/PassiveItem.gd" id="1_vk3dc"]
+[ext_resource type="Texture2D" uid="uid://iymya0xp77km" path="res://Assets/VampireAssets/Passives/Sprite-Pummarola.png" id="2_sgrci"]
+[ext_resource type="Script" path="res://Scenes/Stats.gd" id="3_waxni"]
+
+[sub_resource type="Resource" id="Resource_ivkoh"]
+script = ExtResource("3_waxni")
+description = "+0.2 HP Regen"
+max_health = 0.0
+recovery = 0.2
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_j6qvm"]
+script = ExtResource("3_waxni")
+description = "+0.4 HP Regen"
+max_health = 0.0
+recovery = 0.4
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_krpew"]
+script = ExtResource("3_waxni")
+description = "+0.6 HP Regen"
+max_health = 0.0
+recovery = 0.6
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_vk3dc")
+upgrades = Array[ExtResource("3_waxni")]([SubResource("Resource_ivkoh"), SubResource("Resource_j6qvm"), SubResource("Resource_krpew")])
+title = "HP Regen"
+texture = ExtResource("2_sgrci")

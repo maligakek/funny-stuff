@@ -30,6 +30,7 @@ folder_colors={
 "res://Assets/MineAssets/": "green",
 "res://Resources/": "green",
 "res://Resources/Enemies/": "red",
+"res://Resources/Passive Items/": "orange",
 "res://Shaders/": "pink"
 }
 

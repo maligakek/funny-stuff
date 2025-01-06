@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://b2nirlptw3q21"]
+
+[ext_resource type="Script" path="res://Scenes/PassiveItem.gd" id="1_t4tiy"]
+[ext_resource type="Texture2D" uid="uid://c605pd28ci00" path="res://Assets/VampireAssets/Passives/Sprite-Wings.png" id="2_htfh1"]
+[ext_resource type="Script" path="res://Scenes/Stats.gd" id="3_aahi7"]
+
+[sub_resource type="Resource" id="Resource_0fb4p"]
+script = ExtResource("3_aahi7")
+description = "+25 Movement Speed"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 25.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_wrdq1"]
+script = ExtResource("3_aahi7")
+description = "+30 Movement Speed"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 30.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_amw7d"]
+script = ExtResource("3_aahi7")
+description = "+35 Movement Speed"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 35.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_t4tiy")
+upgrades = Array[ExtResource("3_aahi7")]([SubResource("Resource_0fb4p"), SubResource("Resource_wrdq1"), SubResource("Resource_amw7d")])
+title = "Movement Speed"
+texture = ExtResource("2_htfh1")

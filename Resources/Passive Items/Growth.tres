@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://engjd8yknm6p"]
+
+[ext_resource type="Script" path="res://Scenes/PassiveItem.gd" id="1_tax1k"]
+[ext_resource type="Texture2D" uid="uid://dsbshuhdnstqu" path="res://Assets/VampireAssets/Passives/Sprite-Crown.png" id="2_2jl31"]
+[ext_resource type="Script" path="res://Scenes/Stats.gd" id="3_m2xtu"]
+
+[sub_resource type="Resource" id="Resource_s76xd"]
+script = ExtResource("3_m2xtu")
+description = "+10% Growth"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.1
+
+[sub_resource type="Resource" id="Resource_qa0co"]
+script = ExtResource("3_m2xtu")
+description = "+20% Growth"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.2
+
+[sub_resource type="Resource" id="Resource_f7fnc"]
+script = ExtResource("3_m2xtu")
+description = "+30% Growth"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.3
+
+[resource]
+script = ExtResource("1_tax1k")
+upgrades = Array[ExtResource("3_m2xtu")]([SubResource("Resource_s76xd"), SubResource("Resource_qa0co"), SubResource("Resource_f7fnc")])
+title = "Growth"
+texture = ExtResource("2_2jl31")
