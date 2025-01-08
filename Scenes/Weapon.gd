@@ -11,6 +11,10 @@ class_name Weapon
 @export var projectile_node : PackedScene = preload("res://Scenes/projectile.tscn")
 
 @export var upgrades : Array[Upgrade]
+@export var item_needed : PassiveItem
+@export var evolution : Weapon
+
+var slot
 #var level = 1
 
 func activate(_source, _target, _scene_tree):
@@ -33,3 +37,7 @@ func upgrade_item():
 	
 	level += 1
 	
+func  max_level_reached():
+	if upgrades.size() +1 == level and upgrades.size() != 0:
+		return true
+	return false
