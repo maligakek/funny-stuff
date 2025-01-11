@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://d0khn30b8bndi"]
+[gd_scene load_steps=38 format=3 uid="uid://d0khn30b8bndi"]
 
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_6gcqw"]
 [ext_resource type="Texture2D" uid="uid://mvgn5uk52afy" path="res://Assets/MineAssets/XP_gems/Sprite-Experience_Gem-export.png" id="2_k78y3"]
@@ -12,10 +12,8 @@
 [ext_resource type="FontFile" uid="uid://dnjbhc4e0qia2" path="res://Fonts/EXEPixelPerfect.ttf" id="7_nokbl"]
 [ext_resource type="Resource" uid="uid://dsoiyj1lc7wkl" path="res://Resources/Passive Items/Magnet.tres" id="8_60ppg"]
 [ext_resource type="Script" path="res://Scenes/options.gd" id="8_io7uf"]
+[ext_resource type="Script" path="res://Scenes/chest.gd" id="13_27sub"]
 [ext_resource type="Texture2D" uid="uid://bmas0aw332cq8" path="res://Assets/Assets Tutor/Chest/Fantasy RPG (Toony) 32x32.png" id="13_xdutg"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_solwm"]
-size = Vector2(20, 20)
 
 [sub_resource type="Gradient" id="Gradient_wggd5"]
 offsets = PackedFloat32Array(0.0070922, 0.521277, 1)
@@ -133,7 +131,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wqteb")
 }],
-"loop": true,
+"loop": false,
 "name": &"open_boss_chest",
 "speed": 24.0
 }]
@@ -154,6 +152,9 @@ shadow_color = Color(0, 0, 0, 0.335)
 shadow_size = 1
 shadow_offset = Vector2(2, 2)
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_solwm"]
+size = Vector2(20, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwgas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j5qj3"]
@@ -164,12 +165,21 @@ radius = 50.0
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_6gcqw")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_solwm")
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="UI" type="CanvasLayer" parent="Sprite2D"]
+[node name="Gold" type="Label" parent="UI"]
+unique_name_in_owner = true
+offset_left = 131.0
+offset_top = 36.0
+offset_right = 258.0
+offset_bottom = 62.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_nokbl")
+theme_override_font_sizes/font_size = 32
+text = "Gold: "
 
-[node name="Particle" type="GPUParticles2D" parent="Sprite2D/UI"]
+[node name="Particle" type="GPUParticles2D" parent="UI"]
 process_mode = 3
 visible = false
 position = Vector2(320, 0)
@@ -178,7 +188,7 @@ process_material = SubResource("ParticleProcessMaterial_gtm1v")
 texture = ExtResource("2_k78y3")
 lifetime = 1.5
 
-[node name="Panel" type="NinePatchRect" parent="Sprite2D/UI"]
+[node name="Panel" type="NinePatchRect" parent="UI"]
 process_mode = 3
 visible = false
 anchors_preset = 8
@@ -198,7 +208,7 @@ patch_margin_top = 6
 patch_margin_right = 6
 patch_margin_bottom = 5
 
-[node name="Label" type="Label" parent="Sprite2D/UI/Panel"]
+[node name="Label" type="Label" parent="UI/Panel"]
 layout_mode = 0
 offset_left = 161.0
 offset_top = 7.0
@@ -208,37 +218,37 @@ theme_override_fonts/font = ExtResource("7_nokbl")
 theme_override_font_sizes/font_size = 32
 text = "LEVEL UP"
 
-[node name="Weapons" type="HBoxContainer" parent="Sprite2D/UI"]
+[node name="Weapons" type="HBoxContainer" parent="UI"]
 offset_top = 17.0
 offset_right = 128.0
 offset_bottom = 57.0
 
-[node name="Slot" parent="Sprite2D/UI/Weapons" instance=ExtResource("2_wponj")]
+[node name="Slot" parent="UI/Weapons" instance=ExtResource("2_wponj")]
 layout_mode = 2
 item = ExtResource("3_pdwyg")
 
-[node name="Slot2" parent="Sprite2D/UI/Weapons" instance=ExtResource("2_wponj")]
+[node name="Slot2" parent="UI/Weapons" instance=ExtResource("2_wponj")]
 layout_mode = 2
 
-[node name="Slot3" parent="Sprite2D/UI/Weapons" instance=ExtResource("2_wponj")]
+[node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_wponj")]
 layout_mode = 2
 
-[node name="PassiveItems" type="HBoxContainer" parent="Sprite2D/UI"]
+[node name="PassiveItems" type="HBoxContainer" parent="UI"]
 offset_top = 60.0
 offset_right = 128.0
 offset_bottom = 100.0
 
-[node name="PassiveSlot" parent="Sprite2D/UI/PassiveItems" instance=ExtResource("7_0utof")]
+[node name="PassiveSlot" parent="UI/PassiveItems" instance=ExtResource("7_0utof")]
 layout_mode = 2
 item = ExtResource("8_60ppg")
 
-[node name="PassiveSlot2" parent="Sprite2D/UI/PassiveItems" instance=ExtResource("7_0utof")]
+[node name="PassiveSlot2" parent="UI/PassiveItems" instance=ExtResource("7_0utof")]
 layout_mode = 2
 
-[node name="PassiveSlot3" parent="Sprite2D/UI/PassiveItems" instance=ExtResource("7_0utof")]
+[node name="PassiveSlot3" parent="UI/PassiveItems" instance=ExtResource("7_0utof")]
 layout_mode = 2
 
-[node name="XP" type="TextureProgressBar" parent="Sprite2D/UI"]
+[node name="XP" type="TextureProgressBar" parent="UI"]
 unique_name_in_owner = true
 offset_right = 640.0
 offset_bottom = 40.0
@@ -246,7 +256,7 @@ texture_under = ExtResource("4_q1ory")
 texture_over = ExtResource("5_nijg6")
 texture_progress = ExtResource("6_3w10q")
 
-[node name="Level" type="Label" parent="Sprite2D/UI/XP"]
+[node name="Level" type="Label" parent="UI/XP"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 131.0
@@ -261,7 +271,7 @@ text = "Lvl 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Options" type="VBoxContainer" parent="Sprite2D/UI" node_paths=PackedStringArray("weapons", "passive_items", "particles", "panel")]
+[node name="Options" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons", "passive_items", "particles", "panel")]
 unique_name_in_owner = true
 process_mode = 3
 visible = false
@@ -282,7 +292,8 @@ passive_items = NodePath("../PassiveItems")
 particles = NodePath("../Particle")
 panel = NodePath("../Panel")
 
-[node name="Chest" type="NinePatchRect" parent="Sprite2D/UI"]
+[node name="Chest" type="NinePatchRect" parent="UI"]
+process_mode = 3
 custom_minimum_size = Vector2(300, 200)
 anchors_preset = 8
 anchor_left = 0.5
@@ -300,15 +311,16 @@ patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
 patch_margin_bottom = 5
+script = ExtResource("13_27sub")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D/UI/Chest"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/Chest"]
 position = Vector2(150, 100)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_oblt1")
 animation = &"open_boss_chest"
 autoplay = "Idle_boss_chest"
 
-[node name="Open" type="Button" parent="Sprite2D/UI/Chest"]
+[node name="Open" type="Button" parent="UI/Chest"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -325,7 +337,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_buj2x")
 theme_override_styles/normal = SubResource("StyleBoxFlat_j32mc")
 text = "Open"
 
-[node name="Close" type="Button" parent="Sprite2D/UI/Chest"]
+[node name="Close" type="Button" parent="UI/Chest"]
 visible = false
 layout_mode = 1
 anchors_preset = 7
@@ -344,45 +356,58 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_j32mc")
 text = "Close
 "
 
-[node name="Rewards" type="Control" parent="Sprite2D/UI/Chest"]
+[node name="Rewards" type="Control" parent="UI/Chest"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="Sprite2D/UI/Chest/Rewards"]
+[node name="TextureRect" type="TextureRect" parent="UI/Chest/Rewards"]
 layout_mode = 0
 offset_left = 38.0
 offset_top = 117.0
 offset_right = 78.0
 offset_bottom = 157.0
+expand_mode = 1
+stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="Sprite2D/UI/Chest/Rewards"]
+[node name="TextureRect2" type="TextureRect" parent="UI/Chest/Rewards"]
 layout_mode = 0
 offset_left = 57.0
 offset_top = 43.0
 offset_right = 97.0
 offset_bottom = 83.0
+expand_mode = 1
+stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="Sprite2D/UI/Chest/Rewards"]
+[node name="TextureRect3" type="TextureRect" parent="UI/Chest/Rewards"]
 layout_mode = 0
 offset_left = 131.0
 offset_top = 14.0
 offset_right = 171.0
 offset_bottom = 54.0
+expand_mode = 1
+stretch_mode = 5
 
-[node name="TextureRect4" type="TextureRect" parent="Sprite2D/UI/Chest/Rewards"]
+[node name="TextureRect4" type="TextureRect" parent="UI/Chest/Rewards"]
 layout_mode = 0
 offset_left = 212.0
 offset_top = 45.0
 offset_right = 252.0
 offset_bottom = 85.0
+expand_mode = 1
+stretch_mode = 5
 
-[node name="TextureRect5" type="TextureRect" parent="Sprite2D/UI/Chest/Rewards"]
+[node name="TextureRect5" type="TextureRect" parent="UI/Chest/Rewards"]
 layout_mode = 0
 offset_left = 226.0
 offset_top = 114.0
 offset_right = 266.0
 offset_bottom = 154.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_solwm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_jwgas")
@@ -423,6 +448,8 @@ collision_mask = 4
 unique_name_in_owner = true
 shape = SubResource("CircleShape2D_yljup")
 
+[connection signal="pressed" from="UI/Chest/Open" to="UI/Chest" method="_on_open_pressed"]
+[connection signal="pressed" from="UI/Chest/Close" to="UI/Chest" method="_on_close_pressed"]
 [connection signal="body_entered" from="SelfDamage" to="." method="_on_self_damage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Dash_time" to="." method="_on_dash_time_timeout"]

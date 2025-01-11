@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c6kv2s4q0n5mq" path="res://Scenes/projectile.tscn" id="1_qlkvv"]
 [ext_resource type="Script" path="res://Scenes/Weapon.gd" id="2_psnbm"]
 [ext_resource type="Script" path="res://Scenes/Upgrade.gd" id="3_5hlns"]
-[ext_resource type="Texture2D" uid="uid://cqonh58vp0tvi" path="res://Assets/VampireAssets/magic_wand.png" id="3_bcw7b"]
+[ext_resource type="Texture2D" uid="uid://bf6rb3t18pstn" path="res://Assets/VampireAssets/Sprite-Holy_Wand.png" id="3_cos7e"]
 
 [resource]
 script = ExtResource("2_psnbm")
@@ -13,4 +13,4 @@ speed = 500.0
 projectile_node = ExtResource("1_qlkvv")
 upgrades = Array[ExtResource("3_5hlns")]([])
 title = "Holy Wand"
-texture = ExtResource("3_bcw7b")
+texture = ExtResource("3_cos7e")
