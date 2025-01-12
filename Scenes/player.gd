@@ -28,7 +28,7 @@ var magnet : float = 0:
 		
 var growth : float = 1
 #Physics_process
-var nearest_enemy : CharacterBody2D
+var nearest_enemy# : CharacterBody2D
 
 var nearest_enemy_distance : float = 150 + area
 
@@ -104,7 +104,7 @@ func gain_XP(amount):
 	total_XP += amount  * growth
 
 func check_XP():
-	if XP > %XP.max_value:
+	if XP >= %XP.max_value:
 		XP -= %XP.max_value
 		level += 1
 

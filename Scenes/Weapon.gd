@@ -13,6 +13,7 @@ class_name Weapon
 @export var upgrades : Array[Upgrade]
 @export var item_needed : PassiveItem
 @export var evolution : Weapon
+@export var sound : AudioStream
 
 var slot
 #var level = 1

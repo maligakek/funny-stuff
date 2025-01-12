@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Gold" load_steps=4 format=3 uid="uid://nind7xyvpd84"]
+
+[ext_resource type="Texture2D" uid="uid://ygy1qcbky2s7" path="res://Assets/VampireAssets/Sprite-Gold_Coin.png" id="1_8kp6g"]
+[ext_resource type="Script" path="res://Scenes/gold.gd" id="2_ijccr"]
+[ext_resource type="AudioStream" uid="uid://vt711sbqiy63" path="res://Assets/SFX/powerUp.wav" id="3_4vwme"]
+
+[resource]
+script = ExtResource("2_ijccr")
+gold = 5
+title = "Gold"
+icon = ExtResource("1_8kp6g")
+description = "+5 Gold"
+sound = ExtResource("3_4vwme")

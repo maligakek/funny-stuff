@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=13 format=3 uid="uid://buno8qayuxhe5"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=14 format=3 uid="uid://buno8qayuxhe5"]
 
 [ext_resource type="Resource" uid="uid://ctnxfut5yv3km" path="res://Resources/Weapons/Holy Wand 2.tres" id="1_3fnni"]
 [ext_resource type="PackedScene" uid="uid://c6kv2s4q0n5mq" path="res://Scenes/projectile.tscn" id="1_eoo44"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cqonh58vp0tvi" path="res://Assets/VampireAssets/magic_wand.png" id="3_h4pa3"]
 [ext_resource type="Script" path="res://Scenes/Upgrade.gd" id="4_lfuyv"]
 [ext_resource type="Script" path="res://Scenes/ProjectileUpgrade.gd" id="5_nsxwn"]
+[ext_resource type="AudioStream" uid="uid://cmp3r8ayoc626" path="res://Assets/SFX/hitHurt.wav" id="5_qop4y"]
 
 [sub_resource type="Resource" id="Resource_qyteb"]
 script = ExtResource("5_nsxwn")
@@ -54,5 +55,6 @@ projectile_node = ExtResource("1_eoo44")
 upgrades = Array[ExtResource("4_lfuyv")]([SubResource("Resource_qyteb"), SubResource("Resource_wht32"), SubResource("Resource_o1q4x"), SubResource("Resource_k7tjp"), SubResource("Resource_a51vy")])
 item_needed = ExtResource("2_42fvu")
 evolution = ExtResource("1_3fnni")
+sound = ExtResource("5_qop4y")
 title = "MagicWand"
 texture = ExtResource("3_h4pa3")

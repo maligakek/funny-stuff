@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://n124tqxy1n41"]
+[gd_resource type="Resource" script_class="Gem" load_steps=4 format=3 uid="uid://n124tqxy1n41"]
 
 [ext_resource type="Texture2D" uid="uid://mvgn5uk52afy" path="res://Assets/MineAssets/XP_gems/Sprite-Experience_Gem-export.png" id="1_ls448"]
 [ext_resource type="Script" path="res://Scenes/Gem.gd" id="2_ptgq5"]
+[ext_resource type="AudioStream" uid="uid://3ovu1em4ub3t" path="res://Assets/SFX/pickupGem1.wav" id="3_3tdip"]
 
 [resource]
 script = ExtResource("2_ptgq5")
@@ -9,3 +10,4 @@ XP = 10.0
 title = "Blue Gem"
 icon = ExtResource("1_ls448")
 description = "Gains Experience Points."
+sound = ExtResource("3_3tdip")

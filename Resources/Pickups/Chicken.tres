@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Health" load_steps=4 format=3 uid="uid://ccntflfaocgsn"]
+
+[ext_resource type="Texture2D" uid="uid://dccm7nc8uvgt0" path="res://Assets/VampireAssets/pickups/Sprite-Floor_Chicken-export.png" id="1_qnp2p"]
+[ext_resource type="Script" path="res://Scenes/Health.gd" id="2_gp055"]
+[ext_resource type="AudioStream" uid="uid://vt711sbqiy63" path="res://Assets/SFX/powerUp.wav" id="3_lwsll"]
+
+[resource]
+script = ExtResource("2_gp055")
+amount = 20
+title = "Chicken"
+icon = ExtResource("1_qnp2p")
+description = "+20 Health"
+sound = ExtResource("3_lwsll")

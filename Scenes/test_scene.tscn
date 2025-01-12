@@ -48,6 +48,10 @@ sources/0 = SubResource("TileSetAtlasSource_fwj3n")
 
 [node name="TestScene" type="Node2D"]
 
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.420981, 0.447502, 0.683803, 1)
+blend_mode = 2
+
 [node name="Parallax2D" type="Parallax2D" parent="."]
 repeat_size = Vector2(640, 360)
 

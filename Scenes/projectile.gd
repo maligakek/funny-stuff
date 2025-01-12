@@ -24,3 +24,8 @@ func _on_screen_exited() -> void:
 func _on_timer_timeout() -> void:
 	queue_free()
 	print("deleted")
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.get_parent().has_method("take_damage"):
+		area.get_parent().take_damage(damage)
